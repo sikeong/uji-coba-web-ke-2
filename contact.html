@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Saya | Kontak</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<a href="index.html" class="btn-fixed-back">
+    <span>⬅️ Kembali</span>
+</a>
+    <section class="contact-container">
+        <div class="contact-header">
+            <h1>Mari Terhubung</h1>
+            <p>Punya pertanyaan tentang kode, tugas sekolah, atau sekadar ingin menyapa? Silakan kirim pesan!</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="info-side">
+                <h3>Informasi Kontak</h3>
+                <div class="info-box">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>emailanda@sekolah.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+62xxxxxxx</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jawa Barat, Indonesia</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/username-anda" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="form-side">
+                <form id="waForm">
+                    <div class="input-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Subjek</label>
+                        <select id="subject">
+                            <option value="Tanya Proyek">Tanya Proyek Web</option>
+                            <option value="Diskusi Pelajaran">Diskusi Pelajaran</option>
+                            <option value="Kerja Sama">Kerja Sama</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Pesan</label>
+                        <textarea id="message" rows="5" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                    </div>
+                    <button type="button" onclick="sendToWA()" class="btn-send">
+                        Kirim via WhatsApp <i class="fab fa-whatsapp"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function sendToWA() {
+            const name = document.getElementById('name').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const phone = "62000000"; // GANTI DENGAN NOMOR WA ANDA (awali dengan 62)
+
+            const text = `Halo! Nama saya *${name}*.\nSubjek: *${subject}*\n\nPesan: ${message}`;
+            const encodedText = encodeURIComponent(text);
+            const url = `https://wa.me/${phone}?text=${encodedText}`;
+
+            if(name && message) {
+                window.open(url, '_blank');
+            } else {
+                alert("Mohon isi nama dan pesan terlebih dahulu!");
+            }
+        }
+    </script>
+
+</body>
+</html>

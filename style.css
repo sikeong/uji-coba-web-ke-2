@@ -1,0 +1,350 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d1117; /* Warna gelap ala GitHub/Linktree */
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Membuat semua konten di tengah secara horizontal */
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+/* Header & Profil */
+.header-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.img-logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid #30363d;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.title-text {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.subtitle-text {
+    color: #8b949e;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Link Section */
+.link-section {
+    width: 100%;
+    max-width: 400px; /* Batas lebar tombol agar tidak terlalu panjang di laptop */
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Jarak otomatis antar tombol */
+}
+
+.btn-link {
+    background-color: #21262d; /* Warna abu gelap */
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 16px;
+    text-align: center;
+    border-radius: 12px; /* Membuat sudut agak bulat (rounded) */
+    border: 1px solid #30363d;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efek saat tombol disentuh/hover */
+.btn-link:hover {
+    background-color: #30363d;
+    transform: scale(1.02);
+    border-color: #8b949e;
+}
+
+/* Tombol spesial (YouTube) */
+.btn-link.primary {
+    background-color: #30363d;
+    color: #fff;
+}
+
+.btn-link.primary:hover {
+    background-color: #f0f0f0;
+}
+
+/* Footer */
+.container-footer {
+    margin-top: auto;
+    padding-top: 50px;
+}
+
+.p-footer {
+    color: #484f58;
+    font-size: 12px;
+}
+
+
+
+
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about-container {
+   max-width: 800px;
+    margin: 50px auto; /* Membuat kotak profil berada di tengah layar */
+    text-align: center; /* Memastikan teks dan gambar di dalamnya rata tengah */
+    padding: 20px;
+}
+
+/* Hero Section */
+.profile-img img {
+ width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Membuat gambar jadi bulat sempurna */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #007bff;
+}
+
+.tagline {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Bio */
+.bio-section h2, .skills-section h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.bio-section p {
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skill-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    background: #eef5ff;
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.action-buttons {
+    margin-top: 40px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.github {
+    background: #333;
+    color: #fff;
+}
+
+.contact {
+    background: #007bff;
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive untuk Mobile */
+@media (max-width: 600px) {
+    .about-container {
+        padding: 20px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+.contact-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Dua kolom di layar besar */
+    gap: 40px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+}
+
+.info-side {
+    background: #007bff;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.info-item i { font-size: 1.2rem; }
+
+.form-side {
+    padding: 40px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input, .input-group select, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.btn-send {
+    width: 100%;
+    padding: 15px;
+    background: #25d366; /* Warna Hijau WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-send:hover { background: #128c7e; }
+
+/* Responsive: tumpuk kolom di layar HP */
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Gaya Tombol Melayang */
+.btn-fixed-back {
+    position: fixed;    /* Kunci posisi agar tidak ikut ter-scroll */
+    top: 20px;          /* Jarak 20px dari atas layar */
+    left: 20px;         /* Jarak 20px dari kiri layar */
+    z-index: 9999;      /* Memastikan tombol selalu di lapisan paling atas */
+    
+    /* Tampilan Tombol */
+    text-decoration: none;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    
+    /* Animasi Halus */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* Efek saat Kursor Diarahkan */
+.btn-fixed-back:hover {
+    background-color: #444;
+    transform: scale(1.1); /* Sedikit membesar saat di-hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
